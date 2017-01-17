@@ -5,12 +5,15 @@ Sample exploits for a set of trivial vulnerable programs. The goal of all exploi
 ### Setup Test Env
 
 Disable ASLR using the follow command:
-'''
+```
 sudo bash -c "echo 0 > /proc/sys/kernel/randomize_va_space"
-'''
+```
 Developed exploits are tested on the following 32-bit Kali Linux image:
+
 http://cdimage.kali.org/kali-2016.2/kali-linux-2016.2-i386.iso
+
 VMware/VirtualBox images:
+
 https://images.offensive-security.com/virtual-images/Kali-Linux-2016.2-vm-i686.7z
 https://images.offensive-security.com/virtual-images/Kali-Linux-2016.2-vbox-i686.ova
 
