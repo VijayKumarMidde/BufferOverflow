@@ -15,6 +15,7 @@ http://cdimage.kali.org/kali-2016.2/kali-linux-2016.2-i386.iso
 VMware/VirtualBox images:
 
 https://images.offensive-security.com/virtual-images/Kali-Linux-2016.2-vm-i686.7z
+
 https://images.offensive-security.com/virtual-images/Kali-Linux-2016.2-vbox-i686.ova
 
 NOTE:
