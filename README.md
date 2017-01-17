@@ -1,4 +1,4 @@
-# Simple Buffer Overflow Techniques
+# Classic Buffer Overflow Techniques
 
 Sample exploits for a set of trivial vulnerable programs. The goal of all exploits is to launch '/bin/sh' as root. Each exploit script prepares the appropriate malicious input and launches the vulnerable program with it to get a shell. The exploits are launched from a non-root shell.
 
