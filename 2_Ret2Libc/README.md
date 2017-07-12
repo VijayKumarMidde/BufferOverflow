@@ -45,10 +45,10 @@ Input: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Program received signal SIGSEGV, Segmentation fault.
 0x42424242 in ?? ()
 (gdb)
-
+```
 Next, I found the function addresses of system and exit functions as shown
 below:
-
+```
 (gdb) p system
 $1 = {<text variable, no debug info>} 0xb755d850 <__libc_system>
 (gdb) p exit
